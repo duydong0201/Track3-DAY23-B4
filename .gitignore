@@ -36,6 +36,7 @@ htmlcov/
 # OS
 .DS_Store
 Thumbs.db
+.markdown-collab/
 
 # Hidden grading — do NOT distribute to students
 data/grading/
