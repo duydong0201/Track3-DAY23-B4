@@ -2,9 +2,13 @@
 
 ## 1. Team / student
 
-- **Role**: Teammate 4 — Metrics, Report & Extensions
-- **Lab**: LangGraph Support Ticket Agent Orchestration
+- **Lab**: Day 08 — LangGraph Agentic Orchestration
 - **Status**: Complete & Verified
+- **Danh sách thành viên nhóm**:
+  1. **Lại Duy Đông** (Trưởng nhóm - Teammate 3: Graph Wiring & SQLite Persistence) — MSSV: `2A202601913`
+  2. **Nguyễn Đức Trung** (Teammate 1: State & Core Nodes) — MSSV: `2A202601725`
+  3. **Nguyễn Tuấn Nam** (Teammate 2: Remaining Nodes & Routing) — MSSV: `2A202602039`
+  4. **Đinh Quang Minh** (Teammate 4: Metrics, Report & Extensions) — MSSV: `2A202601347`
 
 ## 2. Architecture
 
@@ -42,10 +46,10 @@ The graph follows a hub-and-spoke pattern after initial classification:
 |--------|-------|
 | Total Scenarios | 7 |
 | Success Rate | 100.0% |
-| Avg Nodes Visited | 6.6 |
-| Total Retries | 4 |
+| Avg Nodes Visited | 6.4 |
+| Total Retries | 3 |
 | Total Interrupts | 2 |
-| Resume Success | No ❌ |
+| Resume Success | Yes ✅ |
 
 
 ### Detailed Scenario Table
@@ -56,7 +60,7 @@ The graph follows a hub-and-spoke pattern after initial classification:
 | S02_tool | tool | tool | ✅ | 0 | 0 |
 | S03_missing | missing_info | missing_info | ✅ | 0 | 0 |
 | S04_risky | risky | risky | ✅ | 0 | 1 |
-| S05_error | error | error | ✅ | 3 | 0 |
+| S05_error | error | error | ✅ | 2 | 0 |
 | S06_delete | risky | risky | ✅ | 0 | 1 |
 | S07_dead_letter | error | error | ✅ | 1 | 0 |
 
@@ -65,7 +69,7 @@ The graph follows a hub-and-spoke pattern after initial classification:
 
 ### Retry Analysis
 
-- **S05_error**: 3 retries
+- **S05_error**: 2 retries
 - **S07_dead_letter**: 1 retries
 
 

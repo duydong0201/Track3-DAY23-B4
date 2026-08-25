@@ -92,9 +92,13 @@ def render_report(metrics: MetricsReport) -> str:
 
 ## 1. Team / student
 
-- **Role**: Teammate 4 — Metrics, Report & Extensions
-- **Lab**: LangGraph Support Ticket Agent Orchestration
+- **Lab**: Day 08 — LangGraph Agentic Orchestration
 - **Status**: Complete & Verified
+- **Danh sách thành viên nhóm**:
+  1. **Lại Duy Đông** (Trưởng nhóm - Teammate 3: Graph Wiring & SQLite Persistence) — MSSV: `2A202601913`
+  2. **Nguyễn Đức Trung** (Teammate 1: State & Core Nodes) — MSSV: `2A202601725`
+  3. **Nguyễn Tuấn Nam** (Teammate 2: Remaining Nodes & Routing) — MSSV: `2A202602039`
+  4. **Đinh Quang Minh** (Teammate 4: Metrics, Report & Extensions) — MSSV: `2A202601347`
 
 ## 2. Architecture
 

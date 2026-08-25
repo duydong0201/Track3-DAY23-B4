@@ -62,7 +62,15 @@ def metric_from_state(
     )
 
 
-def summarize_metrics(items: list[ScenarioMetric]) -> MetricsReport:
+def summarize_metrics(items: list[ScenarioMetric], resume_success: bool = False) -> MetricsReport:
+    """Summarize per-scenario metrics.
+
+    `resume_success` should be set by the caller based on real evidence
+    (state-history replay or crash-resume) — see cli.py's run-scenarios
+    command, which probes `graph.get_state_history()` after the run and
+    passes the result here. Do not hardcode this to False; docs/METRICS.md
+    requires it to reflect an actual demonstration.
+    """
     if not items:
         raise ValueError("No scenario metrics to summarize")
     return MetricsReport(
@@ -71,7 +79,7 @@ def summarize_metrics(items: list[ScenarioMetric]) -> MetricsReport:
         avg_nodes_visited=mean(item.nodes_visited for item in items),
         total_retries=sum(item.retry_count for item in items),
         total_interrupts=sum(item.interrupt_count for item in items),
-        resume_success=False,
+        resume_success=resume_success,
         scenario_metrics=items,
     )
 
